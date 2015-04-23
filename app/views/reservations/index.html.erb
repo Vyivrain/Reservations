@@ -1,0 +1,12 @@
+<div class="page-header title-align">
+  <h1>Restaurant reservations</h1>
+</div>
+
+<div class="container">
+  <h4 class="text-align"><i>Please choose a table, you want to reserve</i></h4>
+  <% [1, 6].each do |i| %>
+    <div class="row-margin">
+      <%= render partial: 'form', locals: { number: i } %>
+    </div>
+  <% end %>
+</div>

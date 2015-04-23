@@ -1,0 +1,58 @@
+<div class="text-center">
+  <% 5.times do |n| %>
+    <div class="col button-margin">
+      <button class="btn btn-lg btn-primary open-modal" data-id="<%= number + n %>" type="button" data-toggle="modal" data-target="#myModal"><%= number + n %></button>
+    </div>
+  <% end %>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Reserve table</h4>
+      </div>
+      <div class="modal-body">
+        <form id="mytime">
+          <div class="form-group">
+            <label for="datepicker">Choose date:</label>
+            <input id="datepicker" type="text" class="form-control modal-text" name="datepicker">
+          </div>
+
+          <div class="form-group">
+            <label for="starttimepicker">Choose begin time:</label>
+            <input id="starttimepicker" name="starttimepicker" type="text" class="form-control modal-text">
+          </div>
+
+          <div class="form-group">
+            <label for="endtimepicker">Choose end time:</label>
+            <input id="endtimepicker" name="endtimepicker" type="text" class="form-control modal-text">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary proceed">Proceed</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="anotherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Thank you for choosing us</h4>
+      </div>
+      <div class="modal-body">
+        <label>You have successfully reserved a table! Enjoy!</label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
