@@ -20,6 +20,6 @@ class Reservation < ActiveRecord::Base
 
   def table_cant_be_reserved_for_time_past
     time = Time.now
-    errors.add(:start_time, "I believe in your force young jedi, but you can't reserve table for past time") if time > start_time
+    errors.add(:start_time, "I believe in your force young jedi, but you can't look into yesterday and reserve table for that time") if time > start_time
   end
 end
