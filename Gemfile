@@ -1,29 +1,38 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
-gem 'rails', '4.2.0'
+ruby File.read('.ruby-version').strip
+gem 'rails', '5.0.0.1'
 
 gem 'pg'
+gem 'puma'
+gem 'sass-rails'
 
-gem 'sass-rails', '~> 5.0'
-
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'uglifier'
+gem 'coffee-rails'
 
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'figaro'
 
 gem 'jquery-rails'
 
 gem 'turbolinks'
 
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', group: :doc
 gem 'jquery-turbolinks'
 
 gem 'rails_12factor', group: :production
+
+group :development do
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
+end
 
 group :development, :test do
   gem 'database_cleaner'
